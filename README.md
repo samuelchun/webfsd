@@ -110,6 +110,12 @@ shouldn't happen.
 Don't use versions below 1.20, there are known security holes.
 
 
+Changes in 1.22
+===============
+
+  * add \<html\> tag with **utf8** encoding on generated file listing html page
+    to display other language texts correctly.
+
 Changes in 1.21
 ===============
 
