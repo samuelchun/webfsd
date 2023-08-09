@@ -1,3 +1,6 @@
+# binary output
+webfsd
+
 # Object files
 *.o
 *.ko
