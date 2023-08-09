@@ -265,7 +265,8 @@ ls(time_t now, char *hostname, char *filename, char *path, int *length)
     len  = 0;
 
     len += sprintf(buf+len,
-		   "<head><title>%s:%d%s</title></head>\n"
+		   "<html>\n"
+		   "<head>\n<title>%s:%d%s</title>\n<meta charset=\"utf-8\" />\n<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n</head>\n"
 		   "<body bgcolor=white text=black link=darkblue vlink=firebrick alink=red>\n"
 		   "<h1>listing: \n",
 		   hostname,tcp_port,path);
@@ -373,7 +374,7 @@ ls(time_t now, char *hostname, char *filename, char *path, int *length)
     len += sprintf(buf+len,
 		   "</pre><hr noshade size=1>\n"
 		   "<small><a href=\"%s\">%s</a> &nbsp; %s</small>\n"
-		   "</body>\n",
+		   "</body>\n</html>\n",
 		   HOMEPAGE,server_name,line);
     for (i = 0; i < count; i++)
 	free(files[i]);
